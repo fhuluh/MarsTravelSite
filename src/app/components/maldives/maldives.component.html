@@ -1,0 +1,403 @@
+
+
+<div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>    
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+              
+              
+                <!-- <nav class="navbar navbar-expand-lg narbar-light">
+                    <a class="navbar-brand mr-auto" href="#">
+                        <img src="assets/img/mars-logo-sml.png" style="width:180px" alt="Site logo">
+                   
+                    </a>
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                              <a class="nav-link "  href="/home">Home </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link active" routerLink="/destination">Top Destinations <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/specials">Our Specials</a>
+                        </li> 
+                          <li class="nav-item">
+                              <a class="nav-link " href="/contact">Contact Us</a>
+                          </li>                          
+                      </ul>
+                </div>                            
+            </nav> -->
+            <app-header></app-header>
+
+
+        </div> <!-- row -->
+    </div> <!-- container -->
+    </div> <!-- .tm-top-bar -->
+    <router-outlet></router-outlet>
+    
+<div class="tm-page-wrap mx-auto" >
+ 
+    <!-- <section class="tm-banner">
+        <div class="tm-container-outer tm-banner-bgc">
+            <div class="container">
+
+                <div class="row tm-banner-row tm-banner-row-header">
+                    <div class="col-xs-12">
+                        <div class="tm-banner-header">
+                            <h1 class="text-uppercase tm-banner-title">Discover <strong>The</strong> MALDIVES</h1>                           
+                        </div>    
+                    </div>                        
+                </div> 
+              
+                <div class="tm-banner-overlayc"></div>
+            </div>                    
+        </div>                   
+    </section> -->
+
+    <section class="p-5 tm-container-outer tm-bg-grayc">            
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">                        
+                    <h2 class="text-uppercase mb-4">ABOUT THE  <strong>MALDIVES</strong> </h2>
+                    <p class="mb-4c">The Maldives are the stuff dreams are made of -- as in dream vacations inspired by those impossibly perfect pictures you've seen, or those pesky fantasies about quitting your day job to live on an exotic island for the rest of your life. Bright sun, transparent blue lagoons, house reefs teeming with fish, low waters with baby reef sharks and rays, and white sand beaches that stretch out into nothing but miles and miles of turquoise waters and blue skies.<br><br>
+
+          
+                        
+    </p>
+      
+                </div>
+            </div>
+        </div>            
+    </section>
+
+
+
+    <div class="tm-container-outer" id="tm-section-3">
+        <ul class="nav nav-pills tm-tabs-links">
+          
+            <li class="tm-tab-link-li">
+                <a routerLink="/destination" data-toggle="tab" class="tm-tab-link ">
+                    <img src="assets/img/africa.png" alt="" class="img-fluid">
+                    Madagascar
+                </a>
+            </li>
+            <li class="tm-tab-link-li" >
+                <a routerLink="/maldives" data-toggle="tab" class="tm-tab-link active"><!-- Current Active Tab -->
+                    <img src="assets/img/asia.png" alt="" class="img-fluid">
+                    MALDIVES
+                </a>
+            </li>
+            <li class="tm-tab-link-li">
+                <a routerLink="/africa" data-toggle="tab" class="tm-tab-link  ">
+                    <img src="assets/img/africa.png" alt="" class="img-fluid">
+                    Africa
+                </a>
+            </li>
+            <li class="tm-tab-link-li">
+                <a routerLink="/secyhelles" data-toggle="tab" class="tm-tab-link ">
+                    <img src="assets/img/australia.png" alt="" class="img-fluid">
+                    SECYHELLES
+                </a>
+            </li>
+            <li class="tm-tab-link-li">
+                <a routerLink="/mauritius" data-toggle="tab" class="tm-tab-link ">
+                    <img src="assets/img/antartica.png" alt="" class="img-fluid">
+                    Mauritius
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content clearfix">
+               
+            
+            <!-- Tab 3  Halaveli-->     
+            <div class="tab-panec fadec show active" id="3a" *ngFor="let item of maldiveslist;">
+    
+               
+               
+                <div class="tm-recommended-place-wrapc">  
+                    <div class="tm-recommended-placec">
+
+
+
+                        <!-- <div class="container">
+                            <form novalidate
+                                [formGroup]="myform"
+                                (ngSubmit)="onSubmit()">
+                          
+                            <fieldset formGroupName="name">
+                              <div class="form-group"
+                                   [ngClass]="{
+                                  'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
+                                  'has-success': firstName.valid && (firstName.dirty || firstName.touched)
+                                }">
+                                <label>First Name</label>
+                                <input type="text"
+                                       class="form-control"
+                                       formControlName="firstName"
+                                       required>
+                                <div class="form-control-feedback"
+                                     *ngIf="firstName.errors && (firstName.dirty || firstName.touched)">
+                                  <p *ngIf="firstName.errors.required">Last Name is required</p>
+                                 </div>                           -->
+                                <!--
+                                  <pre>Valid? {{ myform.controls.name.controls.firstName.valid }}</pre>
+                                  <pre>Dirty? {{ myform.controls.name.controls.firstName.dirty }}</pre>
+                                -->
+                              <!-- </div>
+                          
+                              <div class="form-group"
+                                   [ngClass]="{
+                                  'has-danger': lastName.invalid && (lastName.dirty || lastName.touched),
+                                  'has-success': lastName.valid && (lastName.dirty || lastName.touched)
+                                }">
+                                <label>Last Name</label>
+                                <input type="text"
+                                       class="form-control"
+                                       formControlName="lastName"
+                                       required>
+                                <div class="form-control-feedback"
+                                     *ngIf="lastName.errors && (lastName.dirty || lastName.touched)">
+                                  <p *ngIf="lastName.errors.required">Last Name is required</p>
+                                </div>
+                              </div>
+                            </fieldset>
+                          
+                          
+                            <div class="form-group"
+                                 [ngClass]="{
+                                  'has-danger': email.invalid && (email.dirty || email.touched),
+                                  'has-success': email.valid && (email.dirty || email.touched)
+                             }">
+                              <label>Email</label>
+                              <input type="email"
+                                     class="form-control"
+                                     formControlName="email"
+                                     required>
+                              <div class="form-control-feedback"
+                                   *ngIf="email.errors && (email.dirty || email.touched)">
+                                <p *ngIf="email.errors.required">Email is required</p>
+                                <p *ngIf="email.errors.pattern">The email address must contain at least the @ character</p>
+                              </div> -->
+                          
+                              <!--
+                                <pre>Valid? {{ myform.controls.email.valid }}</pre>
+                                <pre>Dirty? {{ myform.controls.email.dirty }}</pre>
+                              -->
+                          
+                            <!-- </div>
+                          
+                            <div class="form-group"
+                                 [ngClass]="{
+                                  'has-danger': password.invalid && (password.dirty || password.touched),
+                                  'has-success': password.valid && (password.dirty || password.touched)
+                             }">
+                              <label>Password</label>
+                              <input type="password"
+                                     class="form-control"
+                                     formControlName="password"
+                                     required>
+                              <div class="form-control-feedback"
+                                   *ngIf="password.errors && (password.dirty || password.touched)">
+                                <p *ngIf="password.errors.required">Password is required</p>
+                                <p *ngIf="password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
+                              </div>
+                            </div>
+                           -->
+                            
+                              <!-- <pre>{{ language.errors | json }}</pre> -->
+                           
+                          
+                            <!-- <div class="form-group"
+                                 [ngClass]="{
+                                  'has-danger': language.invalid && (language.dirty || language.touched),
+                                  'has-success': language.valid && (language.dirty || language.touched)
+                                }">
+                              <label>Language</label>
+                              <select class="form-control"
+                                      formControlName="language">
+                                <option value="">Please select a language</option>
+                                <option *ngFor="let lang of langs"
+                                        [value]="lang">{{lang}}
+                                </option>
+                              </select>
+                            </div>
+                          
+                            <button type="submit"
+                                    class="btn btn-primary">Submit
+                            </button> -->
+                          
+                            <!-- <pre>{{myform.value | json}}</pre> -->
+                          <!-- </form>
+                          </div>  -->
+
+
+
+
+<form (submit)="sendEmail($event)" class="thisform" > 
+<div class="elem-group">      
+<!-- <label for="name"  style="color: white;">Your First & Last Name</label> -->
+ <input type="text" #fullname="ngModel" [(ngModel)]="service.formData.fullname" name="full_name" placeholder="Please Enter Your Full Name(s)" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+
+<div class="elem-group">
+    <!-- <label for="name"  style="color: white;">Your Email Address</label> -->
+<input type="email"  #email="ngModel" [(ngModel)]="service.formData.email" id="contact_email" name="visitor_email" placeholder="Please Enter Your Email " required>
+ </div>
+
+ <div class="elem-group">
+    <!-- <label for="name"  style="color: white;">Your Cell Number</label> -->
+ <input type="tel"    #tel="ngModel" [(ngModel)]="service.formData.tel"  name="visitor_tel"  placeholder="Please Enter You Mobile Number" pattern=[0-9\sa-z]{3,20} required>
+ </div>
+ <hr>
+
+ <div class="elem-group inlined">
+     
+ <!-- <label for="adult"   style="color: white;">Adults</label> -->
+ <input type="number" id="adult"  #adult="ngModel" [(ngModel)]="service.formData.adult" name="total_adults" placeholder="Total Adults" min="1" required>
+ </div>
+
+ <div class="elem-group inlined">
+ <!-- <label for="child"  style="color: white;">Children</label> -->
+ <input type="number" id="child" #child="ngModel" [(ngModel)]="service.formData.child" name="total_children" placeholder="Total Kids" min="0" required>
+ </div>
+
+ <div class="elem-group inlined">
+ <label for="checkin-date"  style="color: white;">Check-in Date</label>
+ <input type="date" id="checkin-date" #checkin="ngModel" [(ngModel)]="service.formData.checkin" name="visitor_checkin" required>
+ </div>
+
+ <div class="elem-group inlined">
+ <label for="checkout-date"  style="color: white;"> Check-out Date</label>
+ <input type="date" id="checkout-date" #checkout="ngModel" [(ngModel)]="service.formData.checkout" name="visitor_checkout" required>
+ </div>
+
+ <div class="elem-group">
+ <label for="room-selection"  style="color: white;">Select Room Preference</label>
+ <select id="room-selection" #room_preference="ngModel" [(ngModel)]="service.formData.room_preference" name="room_preference" required>
+ <option value="">Choose a Room from the List</option>
+ <option value="connecting">Connecting</option>
+ <option value="adjoining">Adjoining</option>
+ <option value="adjacent">Adjacent</option>
+ </select>
+ </div> 
+ <hr>
+ <div class="elem-group">            
+ <textarea id="message" name="visitor_message" #message="ngModel" [(ngModel)]="service.formData.message" placeholder="Tell us anything else that might be important." rows="1"  required></textarea>
+ </div>
+
+ <!-- hidden but sending -->
+
+<div class="elem-group">
+
+<!-- <input type="email"   id="this_place" #this_place="ngModel" [(ngModel)]="service.formData.this_place" name="this_place" value="{{item.name}}"> -->
+
+
+<input type="text" id="this_place" value="{{item.name}}"  #this_place="ngModel" [(ngModel)]="service.formData.this_place" hidden>
+
+<input type="text"   id="txt" value="{{item.name}}" #this_place="ngModel"  [(ngModel)]="service.formData.this_place" hidden>
+
+<input type="text" name="this_place" id="this_place" value="My default value" [(ngModel)]="service.formData.this_place" hidden>
+
+</div>
+
+
+
+
+ <button type="submit" class="button button-lg button-primary button-ujarak">Enquire Now!</button>
+ </form>
+
+                          
+                        <div class="tm-recommended-description-boxc">
+                            <h3 class="tm-recommended-titlec "> <a >{{item.name}}</a></h3>
+                            <p class="tm-text-highlightc">{{item.location}}</p>
+
+                            <ul class="a" >                                                         
+                                <li  class="fa fa-map-marker tm-text-gray" aria-hidden="true"> </li> <strong><b> {{item.address}}</b></strong> <br>    
+                            </ul>                         
+                            <hr class="hr">  
+                             {{item.about}}                         
+                      <br><Br>
+                      We speak your language!
+                      <br><Br>
+                      <strong><b>{{item.name}} - All Inclusive has been welcoming Mars Travel guests.</b></strong>
+
+                            <hr class="hr">   
+                            <i class="{{item.iconspaicon}}">&nbsp;{{item.iconspaname}}&nbsp;&nbsp;&nbsp;</i>                                                      
+                                            <i class="{{item.iconbaricon}}">&nbsp;{{item.iconbarname}}&nbsp;&nbsp;&nbsp;</i> 
+                                            <i class="{{item.iconbathicon}}">&nbsp;{{item.iconbathname}}&nbsp;&nbsp;&nbsp;</i> 
+                                            <i class="{{item.iconwifiicon}}">&nbsp;{{item.iconwifiname}}&nbsp;&nbsp;&nbsp;</i> 
+                                            <i class="{{item.iconoceanicon}}">&nbsp;{{item.iconoceanname}}&nbsp;&nbsp;&nbsp;</i> 
+                                            <i class="{{item.iconsafeicon}}">&nbsp;{{item.iconsafename}}&nbsp;&nbsp;&nbsp;</i> 
+                                            <i class="{{item.iconbeachicon}}">&nbsp;{{item.iconbeachname}}&nbsp;&nbsp;&nbsp;</i> 
+                                            <i class="{{item.iconairporticon}}">&nbsp;{{item.iconairportname}}&nbsp;&nbsp;&nbsp;</i>  
+                                              <br>
+                                              <br>
+
+<table border="0" style=" width: 100%;">
+    <tr> 
+    <td  class="cell1" rowspan="2" style="width:45%;  background-image: url(data:image/png;base64,{{item.imageDatalogo1}}); background-size:100% 100%; background-color: brown;  background-repeat: no-repeat;"><img src="data:image/png;base64,{{item.imageDatalogo1}}" alt="" style="display:block;   opacity: 0.0;  background-size: auto;"></td>   
+    <td class="cell2" style="background-image: url(data:image/png;base64,{{item.imageDatalogo2}}); background-position: center; background-repeat: no-repeat; background-size:100% 100%;" ></td>             
+    <td class="cell3" style="background-image: url(data:image/png;base64,{{item.imageDatalogo3}}); background-position: center; background-repeat: no-repeat; background-size:100% 100%;"></td>
+  </tr>               
+    <tr>
+    <td class="cell4" style="background-image: url(data:image/png;base64,{{item.imageDatalogo4}});  background-position: center; background-repeat: no-repeat;  background-size:100% 100%;"></td>             
+    <td class="cell5" style="background-image: url(data:image/png;base64,{{item.imageDatalogo5}}); background-position: center; background-repeat: no-repeat;  background-size:100% 100%;"></td>         
+    </tr>
+  </table>
+
+
+
+ </div>                                        
+          </div>
+                </div>                       
+    
+                <!-- <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a> -->
+            </div> <!-- tab-pane -->
+            
+<!-- tab-pane -->
+        </div></div>
+    <app-footer></app-footer>
+</div>
+</div>
+
+<script>
+    function thisFunctions(imgs) {
+      var expandImgs = document.getElementById("expandedImgs");
+      var imgTexts = document.getElementById("imgtexts");
+      expandImgs.src = imgs.src;
+      imgTexts.innerHTML = imgs.alt;
+      expandImgs.parentElement.style.display = "block";
+    }
+    </script>
+
+
+<script type="text/javascript">
+    var currentDateTime = new Date();
+    var year = currentDateTime.getFullYear();
+    var month = (currentDateTime.getMonth() + 1);
+    var date = (currentDateTime.getDate() + 1);
+    
+    if(date < 10) {
+      date = '0' + date;
+    }
+    if(month < 10) {
+      month = '0' + month;
+    }
+    
+    var dateTomorrow = year + "-" + month + "-" + date;
+    var checkinElem = document.querySelector("#checkin-date");
+    var checkoutElem = document.querySelector("#checkout-date");
+    
+    checkinElem.setAttribute("min", dateTomorrow);
+    
+    checkinElem.onchange = function () {
+        checkoutElem.setAttribute("min", this.value);
+    }
+    </script>
+
+    

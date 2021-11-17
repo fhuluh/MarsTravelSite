@@ -2,12 +2,182 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>MarsTravelSite</title>
+  <title>Mars Travel</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+ <!-- load stylesheets -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+ <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+ <link rel="stylesheet" href="assets/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+ <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css"/>
+ <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+ <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+ <link rel="stylesheet" href="assets/css/templatemo-style.css">
+ <link rel="stylesheet" href="assets/css/footer.css">
+ <link rel="stylesheet" href="assets/css/flags.css">
+ <link rel="stylesheet" href="assets/css/modal.css">
+ <script src="assets/js/modal.js"></script>
+
+ 
+ 
+ <!-- add API Key -->
+ <!-- <script src=”https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&key=AIzaSyCdZlJnwlLGYZAEckMCXx17oZxKjEZvsjQ”></script> -->
+
+ <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
-  <app-root></app-root>
+<app-root></app-root>  
+ <!-- WhatsHelp.io widget -->
+ <script type="text/javascript">
+    (function () {
+
+        var options = {
+            facebook: "430403523681978", // Facebook page ID
+            whatsapp: "+27827644694", // WhatsApp number
+            email: "info@marstravel.co.za", // Email
+            sms: "+27827644694", // Sms phone number
+
+            call_to_action: "Get In Touch", // Call to action
+            button_color: "#50688a", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "facebook,whatsapp,sms,email", // Order of buttons
+        };
+
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+
+    })();
+</script>
+<!-- /WhatsHelp.io widget -->
+
+
+
+
+    <!-- load JS files -->
+    <script src="assets/js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+    <script src="assets/js/popper.min.js"></script>                    <!-- https://popper.js.org/ -->       
+    <script src="assets/js/bootstrap.min.js"></script>                 <!-- https://getbootstrap.com/ -->
+    <script src="assets/js/datepicker.min.js"></script>                <!-- https://github.com/qodesmith/datepicker -->
+    <script src="assets/js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+    <script src="assets/slick/slick.min.js"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
+    <script src="assets/js/jquery.scrollTo.min.js"></script>           <!-- https://github.com/flesler/jquery.scrollTo -->    
+    
+    <!-- <script type="text/javascript" async src="//l.getsitecontrol.com/94g2615w.js"></script> -->
+    <script> 
+        /* Google Maps
+        ------------------------------------------------*/
+        var map = '';
+        var center;
+
+        function initialize() {
+            var mapOptions = {
+                zoom: 16,
+                center: new google.maps.LatLng(37.769725, -122.462154),
+                scrollwheel: false
+            };
+
+            map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+
+            google.maps.event.addDomListener(map, 'idle', function() {
+              calculateCenter();
+          });
+
+            google.maps.event.addDomListener(window, 'resize', function() {
+              map.setCenter(center);
+          });
+        }
+
+        function calculateCenter() {
+            center = map.getCenter();
+        }
+
+        function loadGoogleMap(){
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
+            document.body.appendChild(script);
+        }
+
+
+        
+        /* DOM is ready
+        ------------------------------------------------*/
+        $(function(){
+
+            // Change top navbar on scroll
+            $(window).on("scroll", function() {
+                if($(window).scrollTop() > 100) {
+                    $(".tm-top-bar").addClass("active");
+                } else {                    
+                 $(".tm-top-bar").removeClass("active");
+                }
+            });
+
+            // Smooth scroll to search form
+            $('.tm-down-arrow-link').click(function(){
+                $.scrollTo('#tm-section-search', 300, {easing:'linear'});
+            });
+
+            // // // Date Picker in Search form
+             var pickerCheckIn = datepicker('#inputCheckIn');
+             var pickerCheckOut = datepicker('#inputCheckOut');
+
+            // Update nav links on scroll
+            $('#tm-top-bar').singlePageNav({
+                currentClass:'active',
+                offset: 60
+            });
+
+            // Close navbar after clicked
+            $('.nav-link').click(function(){
+                $('#mainNav').removeClass('show');
+            });
+
+            // Slick Carousel
+            $('.tm-slideshow').slick({
+                infinite: true,
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+
+            loadGoogleMap();                                       // Google Map                
+            $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+        });
+
+    </script>         
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://unpkg.com/three@0.129.0/build/three.min.js"></script>
+ 
+    <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImgs");
+          var imgText = document.getElementById("imgtexts");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+        </script>
+
+
+
+ 
+
+<script type="text/javascript"> 
+    document.getElementById("example").setAttribute('value','My default value');
+  </script>
+  
+
+
+
 </body>
 </html>

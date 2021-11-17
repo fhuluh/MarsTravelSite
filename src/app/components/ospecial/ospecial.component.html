@@ -1,0 +1,606 @@
+
+
+<div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>    
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+               
+              
+              <!-- <nav class="navbar navbar-expand-lg narbar-light">
+                    <a class="navbar-brand mr-auto" href="#">
+                        <img src="assets/img/mars-logo-sml.png" style="width:180px" alt="Site logo">
+                   
+                    </a>
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                              <a class="nav-link "  href="/home">Home </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link " href="/destination">Our Destinations <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="/specials">Our Specials</a>
+                        </li> 
+                          <li class="nav-item">
+                              <a class="nav-link" href="/contact">Contact Us</a>
+                          </li>
+                      </ul>
+                </div>                            
+            </nav> -->
+            <app-header></app-header>
+
+        </div> <!-- row -->
+    </div> <!-- container -->
+    </div> <!-- .tm-top-bar -->
+    <router-outlet></router-outlet>
+    
+<div class="tm-page-wrap mx-auto"  >
+  
+
+
+    <section class="p-5 tm-container-outer tm-bg-gray" style="background-image:url(assets/img/KEER.gif);">            
+        <div class="container">
+            <div class="row">    
+                <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">   <br><br>                     
+                    <h2 class="text-uppercase mb-4"  style="color: white;">Running special</h2>
+                    <p class="mb-4" style="color: white;">Marie Lou Simaan the director of the company has been in the travel business for 37 years and has gained sustainable knowledge of the industry. All the staff presently employed are of an immediate and senior status and well travelled.
+
+                        We felt it was necessary to establish ourselves as a professional, valued and competitive agency in the world of travel which we felt was lacking.
+                    </p>
+                    <!-- <a href="rspecial" class="text-uppercase btn-primary tm-btn">explore All Specials</a>                                -->
+                </div>
+            </div>
+        </div>            
+    </section>
+    
+        
+<!--   
+    <app-destinations></app-destinations>
+    <app-places></app-places>
+    <app-contact></app-contact>
+    <app-footer></app-footer> -->
+    <!-- Destination -->  
+
+    <!-- Recomme -->
+    <div class="tm-container-outer" id="tm-section-3" >
+        <ul class="nav nav-pills tm-tabs-links">
+          
+            <li class="tm-tab-link-li">
+                &nbsp;
+            </li>
+         
+            
+        </ul>
+        <div class="tab-content clearfix" *ngFor="let item of PriceList;" >
+               
+            
+            <!-- Tab 3  Madagascar-->     
+            <div class="tab-panec fadec show active" id="3a">
+    
+                <div class="tm-recommended-place-wrapc">
+  
+                    <div class="tm-recommended-placec">
+
+                        
+
+ <!-- <form class="thisform"> 
+
+<div class="elem-group">
+<label for="name">Your Name</label>
+ <input type="text"  name="full_name" placeholder="Full Name(s)" pattern=[A-Z\sa-z]{3,20} required>
+ </div>
+
+<div class="elem-group">
+<input type="email"  id="contact_email" name="visitor_email" placeholder="john.doe@email.com" required>
+ </div>
+
+ <div class="elem-group">
+ <input type="tel"   name="visitor_tel"  placeholder="498-348-3872" pattern=[0-9\sa-z]{3,20} required>
+ </div>
+ <hr>
+
+ <div class="elem-group inlined">
+ <label for="adult">Adults</label>
+ <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+ </div>
+
+ <div class="elem-group inlined">
+ <label for="child">Children</label>
+ <input type="number" id="child"  name="total_children" placeholder="2" min="0" required>
+ </div>
+
+ <div class="elem-group inlined">
+ <label for="checkin-date">Check-in Date</label>
+ <input type="date" id="checkin-date"   name="visitor_checkin" required>
+ </div>
+
+ <div class="elem-group inlined">
+ <label for="checkout-date">Check-out Date</label>
+ <input type="date" id="checkout-date" name="visitor_checkout" required>
+ </div>
+
+ <div class="elem-group">
+ <label for="room-selection">Select Room Preference</label>
+ <select id="room-selection"  name="room_preference" required>
+
+ <option value="">Choose a Room from the List</option>
+ <option value="connecting">Connecting</option>
+ <option value="adjoining">Adjoining</option>
+ <option value="adjacent">Adjacent</option>
+ </select>
+ </div>
+ 
+ <hr>
+ <div class="elem-group">            
+ <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+ </div>
+
+ <button type="submit" class="button button-lg button-primary button-ujarak" >Book The Rooms</button>
+
+ <br>
+<div class="main" style="width: 100%;">
+
+    <p style="color: aliceblue;"> Price change goes here</p>
+  </div>
+
+
+ 
+      
+ </form>  -->
+ <!--  <li *ngFor="let item of items; index as i; trackBy: trackByFn">...</li> -->
+
+                          
+                        <div class="tm-recommended-description-boxc" >
+                            <h3 class="tm-recommended-titlec"> <a >{{item.SpecialName}} -  <i style="color:black; font-weight: lighter; text-transform: lowercase; font-size: 14px;">({{item.SpecialDepName}})</i></a></h3>
+                            <!-- <p class="tm-text-highlightc">Island in Madagascar, East Africa</p> -->
+
+                            <ul class="a" >                                                         
+                                <li  class="fa fa-map-marker tm-text-gray" aria-hidden="true"> </li> <strong><b> {{item.Address}}</b></strong> <br>    
+                            </ul>                         
+                            <hr class="hr">                   
+                                                        
+                            <div class="main" style="background-color: rgb(255, 255, 255); margin-top: 5px; height:100%; float: left;  padding: 15px 15px;  color:  rgb(80 104 138); border-right: 1px dotted rgb(80, 104, 138);">
+                                <h2 style="color: rgb(80 104 138); text-transform: uppercase;">select your preferences</h2>
+
+                                <!-- <input [(ngModel)]="name" #ctrl="ngModel" required>
+                                <p>Value: {{ name }}</p>
+                                <p>Valid: {{ ctrl.valid }}</p>                            
+                                <button (click)="setValue()">Set value</button> -->
+
+
+                                
+                                <p style="text-align: justify;">The best time to visit the {{item.SpecialName}} is November to April. November through January can be a bit windy.</p>
+                               
+
+                    
+                            <form  (submit)="insertRecord()"> 
+
+                              <div class="form-group" (onclick)="daysSubmit()">
+                                <label for="exampleFormControlSelect1">Select Number Of Days</label>
+                                <select [(ngModel)]="Totdays" #tdays="ngModel" [(ngModel)]="servicePut.formData.tdays" id="Totdays" name="Totdays" class="form-control" >
+                                  <option  value="0">0</option><option  value="1">1</option><option  value="2">2</option><option  value="3">3</option>
+                                  <option  value="4">4</option><option  value="5">5</option><option  value="6">6</option><option  value="7">7</option>
+                                  <option  value="8">8</option><option  value="9">9</option><option  value="10">10</option><option  value="11">11</option>  
+                                  <option  value="13">13</option><option  value="14">14</option><option  value="15">15</option><option  value="16">16</option>  
+                                  <option  value="17">17</option><option  value="18">18</option><option  value="19">19</option><option  value="20">20</option>  
+                                  <option  value="21">21</option><option  value="22">22</option> <option  value="23">23</option> <option  value="24">24</option>  
+                                </select>
+                              </div>
+
+                              <div class="form-group" (onclick)="AdultonSubmit()">
+                                <label for="exampleFormControlSelect1">Select Number Of Adults</label>
+                                <select [(ngModel)]="Totadults" #adults="ngModel" [(ngModel)]="servicePut.formData.adults" id="Totadults" name="Totadults" class="form-control" >
+                                  <option  value="0">0</option>
+                                  <option  value="1">1</option>
+                                  <option  value="2">2</option>
+                                  <option  value="3">3</option>
+                                  <option  value="4">4</option>
+                                  <option  value="5">5</option>
+                                  <option  value="6">6</option>
+                                  <option  value="7">7</option>
+                                  <option  value="8">8</option>
+                                  <option  value="9">9</option>             
+                                </select>
+                              </div>
+
+                              <div class="form-group" (onclick)="KidsonSubmit()">
+                                <label for="exampleFormControlSelect1">Select Number Of Kids</label>
+                                <select [(ngModel)]="Totkids" #kids="ngModel" [(ngModel)]="servicePut.formData.kids" id="Totkids" name="Totkids" class="form-control"  >
+                                  <option  value="0">0</option>
+                                  <option  value="1">1</option>
+                                  <option  value="2">2</option>
+                                  <option  value="3">3</option>
+                                  <option  value="4">4</option>
+                                  <option  value="5">5</option>
+                                  <option  value="6">6</option>
+                                  <option  value="7">7</option>
+                                  <option  value="8">8</option>
+                                  <option  value="9">9</option>             
+                                </select>
+                              </div>
+
+
+                              <div class="form-group" (onload)="onSubmit()">
+                                <label for="exampleFormControlSelect1">Total People</label>
+                                <select [(ngModel)]="people" #TotalPeople="ngModel" [(ngModel)]="servicePut.formData.TotalPeople" id="people" name="people" class="form-control" convert-to-number>
+                                  <option  value="{{Totadults*1 + 1* Totkids  | number:'1.0-3'}}" selected>{{Totadults*1 + 1* Totkids  | number:'1.0-3'}}</option>                                          
+                                </select>
+                              </div>
+
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1 ">Full Name(s)</label>
+                                    <input value="sa" type="text" name="Fullname" #Fullname="ngModel" [(ngModel)]="servicePut.formData.Fullname"  class="form-control" id="exampleFormControlInput1" placeholder="John Doe">
+                                </div>
+
+                                  
+                                <div class="form-group">
+                                  <label for="exampleFormControlInput1 ">Cell Number</label>
+                                  <input type="tell" name="Tell" #Tell="ngModel" [(ngModel)]="servicePut.formData.Tell" class="form-control" id="exampleFormControlInput1" placeholder="0712345678">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1 ">Email address</label>
+                                    <input type="email" name="Email" #Email="ngModel" [(ngModel)]="servicePut.formData.Email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                </div>
+                                                            
+                               <input  hidden type="text" value='ss' name="specialname" #specialname="ngModel" [(ngModel)]="servicePut.formData.specialname"  class="form-control" id="exampleFormControlInput1" placeholder="special name" value=" {{item.SpecialName }} {{people }}" >
+                              
+                               <input hidden value="{{item.TotalPrice* item.days + item.BreakFast * people * item.days  + item.Lunch * people * item.days + item.Dinner * people  * item.days + item.CommunityLevies * people * item.days }}" type="text" name="subtotal" #subtotal="ngModel" [(ngModel)]="servicePut.formData.subtotal"  class="form-control" id="exampleFormControlInput1" placeholder="subtotal">
+                              
+                                <input hidden type="text" name="tax" #tax="ngModel" [(ngModel)]="servicePut.formData.tax"  class="form-control" id="exampleFormControlInput1" placeholder="tax" value="{{ item.TotalPrice * item.days * 15 / 100 + item.BreakFast * people * item.days * 15 / 100 + item.Lunch * people * item.days * 15 / 100+ item.Dinner * people  * item.days * 15 / 100 + item.CommunityLevies * people * item.days * 15 / 100 }}">
+                              
+                                <input hidden type="text" name="total" #total="ngModel" [(ngModel)]="servicePut.formData.total"  class="form-control" id="exampleFormControlInput1" placeholder="total" value="{{item.TotalPrice* item.days + item.BreakFast * people * item.days  + item.Lunch * people * item.days + item.Dinner * people  * item.days + item.CommunityLevies * people * item.days + item.TotalPrice * item.days * 15 / 100 + item.BreakFast * people * item.days * 15 / 100 + item.Lunch * people * item.days * 15 / 100+ item.Dinner * people  * item.days * 15 / 100 + item.CommunityLevies * people * item.days * 15 / 100 }}">
+                              
+                                <input hidden type="text" name="specialinfo" #specialinfo="ngModel" [(ngModel)]="servicePut.formData.specialinfo"  class="form-control" id="exampleFormControlInput1" placeholder="special info">
+                              
+                                <p hidden #specialname="ngModel" [(ngModel)]="servicePut.formData.specialname" > {{item.SpecialName}}</p>
+                              
+                                <!-- <a _ngcontent-kmj-c108="" type="button"  href="#" class="button button-lg button-primary button-ujarak" style="margin-left: -5px; min-width: 148px;">Enquire</a>  -->
+
+                                
+                                <button  type="submit"   class="button button-lg button-primary button-ujarak" style="margin-left: -5px; min-width: 148px;">Enquire Now</button>
+
+                                <!-- <button  (click)="showSuccess()">Psresss</button> -->
+                                <!-- <app-toasts aria-live="polite" aria-atomic="true"></app-toasts> -->
+                              </form>                              
+                              </div>
+                            
+                          
+                              <div class="right" style="height:100%; background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);  border-left: 1px dotted rgb(0, 0, 0);">
+                               
+                                <h3>{{item.SpecialName}}</h3><br>
+                                <strong><b>ROOMS & COST</b></strong>
+                                <p>
+                                 {{item.RoomStyle}} Room {{item.Adults | currency:'R'}} Adult sharing per night.
+                                 <br>
+                                 {{item.RoomStyle}} Room {{item.Children | currency:'R'}} Children sharing per night.
+
+                                </p>
+                                <strong><b>THIS INCLUDES</b></strong>
+                                <p>
+                                  <i>Break-Fast:  <b>{{item.BreakFast | currency:'R'}}</b></i> 
+                                    <br> 
+                                  <i>Lunch:  <b>{{item.Lunch | currency:'R'}}</b> </i>
+                                    <br>
+                                  <i>Dinner:  <b>{{item.Dinner | currency:'R'}}</b> </i>
+                                    <br>
+                                  <i>{{item.GameDrives}} Game Drives. {{item.CommunityLevies | currency:'R'}}</i>
+                                  <br><br>                                  
+                                  <i>{{item.Transfer_info}}. {{item.Transfer_fee | currency:'R'}}</i>
+                                </p>
+                               
+
+
+                                <p style="text-align: justify;"> <strong><b>NB.</b></strong> <i> This special is running from <b><strong>{{item.fromD}}</strong></b> To <b><strong>{{item.toD}}</strong></b>. Enquire before the special runs out.</i> 
+                                  <br>  
+                                  
+                                  <hr>
+
+                                <h2 style="text-transform: uppercase;">Estimate Cost</h2>
+                                <p style="text-align: justify;">Get an Estimate cost of the {{item.SpecialDepName}}, <b><strong>{{item.SpecialName}}</strong></b> Special. 
+                                <br>
+                               
+
+                                <table class="table table-hover" >
+                                    <thead class="thead-dark">
+                                      <tr>
+                                        <th scope="col">Item / Desc.</th>
+                                        <th scope="col">Qty. </th>
+                                        <th scope="col">Unit Price </th>
+                                        <th scope="col">Price </th>
+                                      </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+
+                                      <tr>                                     
+                                        <td colspan="4" align="center" style="background-color: rgb(80 104 138); color: rgb(249, 249, 249); font-size: 13px;">This Special is for a <b>{{Totdays}}</b> Day(s) Stay</td>                                                
+                                      </tr>
+
+                                      <!-- hedden -->
+                                      <tr hidden>
+                                        <th scope="row">Special Price</th>
+                                        <td>{{item.days | number:'1.0-1'}} Day(s)</td>
+                                        <td>{{item.TotalPrice | number:'1.2-3'}}</td>
+                                        <td>{{item.TotalPrice * item.days | number:'1.2-3'}}</td>
+                                      </tr>
+                                      
+                                      <!-- Adults -->
+                                      <tr>
+                                        <th scope="row">Adults</th>
+                                        <td><i>{{Totadults}} </i></td>
+                                        <td>{{item.Adults | number:'1.2-3' }}</td>
+                                        <td>{{item.Adults * Totadults * Totdays | number: '1.2-3'}}</td>                                        
+                                      </tr>
+                                      
+                                      <!-- Kids -->
+                                      <tr>
+                                        <th scope="row">Kids</th>
+                                        <td><i>{{Totkids}}</i></td>
+                                        <td>{{item.Children | number:'1.2-3' }}</td>
+                                        <td>{{item.Children * Totkids * Totdays | number: '1.2-3'}}</td>                                        
+                                      </tr>
+
+                                      <!-- Breakfast -->
+                                      <tr>
+                                        <th scope="row">Breakfast</th>
+                                        <td><i>{{people| number:'1.0-1'}} Person(s) in {{Totdays | number:'1.0-1'}}  Day(s)</i></td>
+                                        <td>{{item.BreakFast | number:'1.2-3' }}</td>
+                                        <td>{{item.BreakFast * Totdays * people | number: '1.2-3' }}</td>                                        
+                                      </tr>
+
+                                      <!-- Lunch -->
+                                      <tr>
+                                        <th scope="row">Lunch</th>
+                                        <td><i>{{people}} Person(s) in {{Totdays | number:'1.0-1'}}  Day(s)</i></td>
+                                        <td>{{item.Lunch | number:'1.2-3' }}</td>
+                                        <td>{{item.Lunch * Totdays * people | number: '1.2-3'}}</td>
+                                      </tr>
+                                      
+                                      <!-- Dinner -->
+                                      <tr>
+                                        <th scope="row">Dinner</th>
+                                        <td><i>{{people }} Person(s) in {{Totdays | number:'1.0-1'}}  Day(s)</i></td>
+                                        <td>{{ item.Dinner | number:'1.2-3' }}</td>
+                                        <td>{{item.Dinner * Totdays * people | number: '1.2-3'}}</td>
+                                      </tr>
+
+                                      <!-- Levies -->
+                                      <tr>
+                                        <th scope="row">Community Levies</th>
+                                        <td><i>{{people}} Person(s) in {{Totdays | number:'1.0-1'}}  Day(s)</i></td>
+                                        <td>{{ item.CommunityLevies | number:'1.2-3' }}</td>
+                                        <td>{{item.CommunityLevies * Totdays * people | number: '1.2-3'}}</td>
+                                      </tr>
+
+                                      <!-- Sub total -->                                
+                                      <tr style="border: 0px;">                                   
+                                        <td colspan="3"  style="text-align: right; font-weight: bolder; "><b>Subtotal:</b></td>
+                                        <td> {{ item.Adults * Totadults * Totdays + item.Children * Totkids * Totdays + item.BreakFast * Totdays * people + item.Lunch * Totdays * people + item.Dinner * Totdays * people + item.CommunityLevies * Totdays * people | number: '1.2-3' }} </td>
+                                      </tr>
+                                      
+                                      <!-- Tax -->
+                                      <tr style="border: 0px;">                                
+                                        <td colspan="3"  style="text-align: right; font-weight: bolder; border: 0px;"><b>Tax 15%:</b></td>
+                                        <!-- <td>{{ item.TotalPrice * item.days * 15 / 100 + item.BreakFast * people * item.days * 15 / 100 + item.Lunch * people * item.days * 15 / 100+ item.Dinner * people  * item.days * 15 / 100 + item.CommunityLevies * people * item.days * 15 / 100 | number: '1.2-3'}}</td> -->
+                                        <td>{{item.Adults * Totadults * Totdays * 15 / 100 + item.Children * Totkids * Totdays * 15 / 100 + item.BreakFast * Totdays * people * 15 / 100 + item.Lunch * Totdays * people * 15 / 100 + item.Dinner * Totdays * people * 15 / 100 + item.CommunityLevies * Totdays * people * 15 / 100 | number: '1.2-3'}}</td>
+                                      </tr>
+                                      
+                                      <!-- Total -->
+                                      <tr style="border: 1px;">                                     
+                                        <td colspan="3"  style="text-align: right; font-weight: bolder; border: 1px;"><b>Total:</b></td>
+                                        <!-- <td> <i><b>{{item.TotalPrice* item.days + item.BreakFast * people * item.days  + item.Lunch * people * item.days + item.Dinner * people  * item.days + item.CommunityLevies * people * item.days + item.TotalPrice * item.days * 15 / 100 + item.BreakFast * people * item.days * 15 / 100 + item.Lunch * people * item.days * 15 / 100+ item.Dinner * people  * item.days * 15 / 100 + item.CommunityLevies * people * item.days * 15 / 100 | number: '1.2-3'}} </b></i> </td> -->
+                                        <td>{{ item.Adults * Totadults * Totdays + item.Children * Totkids * Totdays + item.BreakFast * Totdays * people + item.Lunch * Totdays * people + item.Dinner * Totdays * people + item.CommunityLevies * Totdays * people + item.Adults * Totadults * Totdays * 15 / 100 + item.Children * Totkids * Totdays * 15 / 100 + item.BreakFast * Totdays * people * 15 / 100 + item.Lunch * Totdays * people * 15 / 100 + item.Dinner * Totdays * people * 15 / 100 + item.CommunityLevies * Totdays * people * 15 / 100 | number: '1.2-3' }}</td>
+                                      </tr>
+                                      
+                                    </tbody>
+                                  </table>   
+                                <!-- <a _ngcontent-kmj-c108="" type="button"  href="#" class="button button-lg button-primary button-ujarak" style="margin-left: -5px; min-width: 148px;">Enquire</a>-->                                    
+                              </div>
+
+                      <strong><b>&nbsp; <br><br><br><br></b></strong>
+                                        
+                      <hr class="hr">                             
+                              <strong><b>{{item.SpecialName}} - All Inclusive has been welcoming Mars Travel guests since 23 Mar 2012.</b></strong><br>
+                              <!-- <p class="fa fa-bed tm-text-highlight">&nbsp;Ocean view&nbsp;&nbsp;|&nbsp;</p>
+                              <p class="fa fa-flag-checkered tm-text-highlight">&nbsp;Private beach&nbsp;&nbsp;|&nbsp; </p>
+                              <p class="fa fa-cutlery tm-text-highlight">&nbsp;Minibar&nbsp;&nbsp;|&nbsp; </p>
+                              <p class="fa fa-h-square tm-text-highlight">&nbsp;Safe&nbsp;&nbsp;|&nbsp; </p>        
+                              <p class="fa fa-wifi tm-text-highlight">&nbsp;Free Wifi&nbsp;&nbsp;|&nbsp; </p>  
+                              <p class="fa fa-coffee tm-text-highlight">&nbsp;Superb breakfast&nbsp;&nbsp;|&nbsp; </p>  
+                              <p class="fa fa-snowflake-o tm-text-highlight">&nbsp;Air conditioning&nbsp;&nbsp;|&nbsp; </p>  
+                              <p class="fa fa-plane tm-text-highlight">&nbsp;Airport transportation&nbsp;&nbsp;|&nbsp; </p>  
+                            -->
+                              
+
+
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<!-- <div class="pic-header">
+ 
+    <div class="container-fluid"></div>
+    <div type="button" class="row lodge-pics-holder" data-toggle="modal" data-target="#gallery">
+      
+        <div class="col-md-6 nopadding">
+        <div class="lodge-header-gallery-hero-image rocket-lazyload lazyloaded" style="background-image: url(data:image/png;base64,{{item.imageDatalogo1}});" data-ll-status="loaded">
+        </div>
+      </div>
+     
+      <div class="col-md-6 sub-images">
+        <div class="row">
+          
+          <div class="col-md-6 nopadding">
+            <div class="lodge-header-gallery-sub-image rocket-lazyload lazyloaded" style="background-image: url(data:image/png;base64,{{item.imageDatalogo2}});" data-ll-status="loaded"></div>
+          </div>
+          
+          <div class="col-md-6 nopadding">
+            <div class="lodge-header-gallery-sub-image rocket-lazyload lazyloaded" style="background-image: url(data:image/png;base64,{{item.imageDatalogo3}});" data-ll-status="loaded"></div>
+          </div>
+          
+          <div class="col-md-6 nopadding">
+            <div class="lodge-header-gallery-sub-image rocket-lazyload lazyloaded" style="background-image: url(data:image/png;base64,{{item.imageDatalogo4}});" data-ll-status="loaded"></div>
+          </div>
+          
+          <div class="col-md-6 nopadding">
+            <div class="lodge-header-gallery-sub-image rocket-lazyload lazyloaded" style="background-image: url(data:image/png;base64,{{item.imageDatalogo5}});" data-ll-status="loaded"></div>
+        </div>          
+        </div>
+      </div>
+      
+    </div>
+
+</div>    -->
+
+
+<table border="0" style=" width: 100%;">
+  <tr> 
+  <td  class="cell1" rowspan="2" style="width:50%;  background-image: url(data:image/png;base64,{{item.imageDatalogo1}}); background-size:100% 100%;  background-repeat: no-repeat;"><img src="data:image/png;base64,{{item.imageDatalogo1}}" alt="" style="display:block;   opacity: 0.0; background-size:100% 100%;"></td> 
+
+  <td class="cell2" style="background-image: url(data:image/png;base64,{{item.imageDatalogo2}}); background-position: center; background-repeat: no-repeat; background-size:100% 100%;" ></td>
+           
+  <td class="cell3" style="background-image: url(data:image/png;base64,{{item.imageDatalogo3}}); background-position: center; background-repeat: no-repeat; background-size:100% 100%;"></td>
+  </tr> 
+            
+  <tr>
+  <td class="cell4" style="background-image: url(data:image/png;base64,{{item.imageDatalogo4}});  background-position: center; background-repeat: no-repeat;  background-size:100% 100%;"></td> 
+          
+  <td class="cell5" style="background-image: url(data:image/png;base64,{{item.imageDatalogo5}}); background-position: center; background-repeat: no-repeat;  background-size:100% 100%;"></td>         
+  </tr>
+</table>
+
+                    
+
+
+
+
+
+
+<!--  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                        <!-- </div>                                         -->
+                    </div>
+                </div>                       
+    
+                <!-- <a href="#" class="text-uppercase btn-primary tm-btn mx-auto tm-d-table">Show More Places</a> -->
+            </div> <!-- tab-pane -->
+            
+          
+      
+    
+            
+           
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+    
+<script> 
+    /* Google Maps
+    ------------------------------------------------*/
+    var map = '';
+    var center;
+
+    function initialize() {
+        var mapOptions = {
+            zoom: 16,
+            center: new google.maps.LatLng(37.769725, -122.462154),
+            scrollwheel: false
+        };
+
+        map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+
+        google.maps.event.addDomListener(map, 'idle', function() {
+          calculateCenter();
+      });
+
+        google.maps.event.addDomListener(window, 'resize', function() {
+          map.setCenter(center);
+      });
+    }
+
+    function calculateCenter() {
+        center = map.getCenter();
+    }
+
+    function loadGoogleMap(){
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
+        document.body.appendChild(script);
+    } 
+
+
+    
+    /* DOM is ready
+    ------------------------------------------------*/
+    $(function(){
+
+        // Change top navbar on scroll
+        $(window).on("scroll", function() {
+            if($(window).scrollTop() > 100) {
+                $(".tm-top-bar").addClass("active");
+            } else {                    
+             $(".tm-top-bar").removeClass("active");
+            }
+        });
+
+        // Smooth scroll to search form
+        $('.tm-down-arrow-link').click(function(){
+            $.scrollTo('#tm-section-search', 300, {easing:'linear'});
+        });
+
+        // // // Date Picker in Search form
+        var pickerCheckIn = datepicker('#inputCheckIn');
+        var pickerCheckOut = datepicker('#inputCheckOut');
+
+        // Update nav links on scroll
+        $('#tm-top-bar').singlePageNav({
+            currentClass:'active',
+            offset: 60
+        });
+
+        // Close navbar after clicked
+        $('.nav-link').click(function(){
+            $('#mainNav').removeClass('show');
+        });
+
+        // Slick Carousel
+        $('.tm-slideshow').slick({
+            infinite: true,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        loadGoogleMap();                                       // Google Map                
+        $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+    });
+
+</script>         
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://unpkg.com/three@0.129.0/build/three.min.js"></script>
+
+<script>
+    function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImgs");
+      var imgText = document.getElementById("imgtexts");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+    }
+    </script>

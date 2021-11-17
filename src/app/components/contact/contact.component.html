@@ -1,0 +1,141 @@
+
+
+<div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>    
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+              
+              
+                <!-- <nav class="navbar navbar-expand-lg narbar-light">
+                    <a class="navbar-brand mr-auto" href="#">
+                        <img src="assets/img/mars-logo-sml.png" style="width:180px" alt="Site logo">
+                   
+                    </a>
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                              <a class="nav-link "  href="/home">Home </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link " routerLink="/destination">Top Destinations <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/specials">Our Specials</a>
+                        </li> 
+                          <li class="nav-item">
+                              <a class="nav-link active" href="/contact">Contact Us</a>
+                          </li>
+                      </ul>
+                </div>                            
+            </nav> -->
+            <app-header></app-header>
+
+        </div> <!-- row -->
+    </div> <!-- container -->
+    </div> <!-- .tm-top-bar -->
+    <router-outlet></router-outlet>
+    
+<div class="tm-page-wrap mx-auto" >
+    <section class="tm-banner">
+        <div class="tm-container-outer tm-banner-bgc">
+            <div class="container">
+
+                <div class="row tm-banner-row tm-banner-row-header">
+                    <div class="col-xs-12">
+                        <div class="tm-banner-header">
+                            <h1 class="text-uppercase tm-banner-title">Get In <strong></strong> Touch with Us</h1>                           
+                        </div>    
+                    </div>  <!-- col-xs-12 -->                      
+                </div> <!-- row -->
+              
+                <div class="tm-banner-overlayc"></div>
+            </div>  <!-- .container -->                   
+        </div>     <!-- .tm-container-outer -->                 
+    </section>
+
+  
+    <section class="p-5 tm-container-outer tm-bg-gray" style=" background-image: linear-gradient(to right, #151515 , #637895);    color: #e6e6e6;">            
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">                        
+                    <h2 class="text-uppercase mb-4">Your <strong>Journey</strong> is our priority</h2>
+                    <p class="mb-4">Marie Lou Simaan the director of the company has been in the travel business for 37 years and has gained sustainable knowledge of the industry. All the staff presently employed are of an immediate and senior status and well travelled.<br><br>
+
+                        We felt it was necessary to establish ourselves as a professional, valued and competitive agency in the world of travel which we felt was lacking.</p>
+            
+                </div>
+            </div>
+        </div>            
+    </section>
+
+    <div class="tm-container-outer tm-position-relative" id="tm-section-4">
+    
+        <div id="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3582.1659378424933!2d28.03361!3d-26.126132!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c88d917674f%3A0x973eafaf6c51f8b1!2sAlbury%20Office%20Park!5e0!3m2!1sen!2sza!4v1632826231102!5m2!1sen!2sza" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div id="map" class="map"></div>
+    
+        <form class="tm-contact-form" (submit)="sendEmail($event)">    
+            <div class="form-group tm-name-container">
+                <input type="text" name="to_name" #fullname="ngModel" [(ngModel)]="service.formData.fullname"  class="form-control" placeholder="Name"  required />
+            </div>        
+            <div class="form-group tm-email-container">
+                <input type="email"  name="from_name" #email="ngModel" [(ngModel)]="service.formData.email" id="contact_email" class="form-control" placeholder="Email"  required/>
+            </div>            
+            <div class="form-group">
+                <input type="text" id="contact_subject" name="subject" class="form-control" placeholder="Subject"  required/>
+            </div>            
+            <div class="form-group">
+                <textarea id="contact_message" name="message" #comment="ngModel" [(ngModel)]="service.formData.comment" class="form-control" rows="9" placeholder="Message" required></textarea>
+            </div>            
+            <button type="submit" class="btn btn-primary tm-btn-primary tm-btn-send text-uppercase">Send Message Now</button>
+        </form>
+   
+        
+    </div> <!-- .tm-container-outer -->
+
+
+    <app-footer></app-footer>
+</div>
+</div>
+
+<!-- <script>
+    function thisFunctions(imgs) {
+      var expandImgs = document.getElementById("expandedImgs");
+      var imgTexts = document.getElementById("imgtexts");
+      expandImgs.src = imgs.src;
+      imgTexts.innerHTML = imgs.alt;
+      expandImgs.parentElement.style.display = "block";
+    }
+    </script> -->
+
+<!-- 
+<script type="text/javascript">
+    var currentDateTime = new Date();
+    var year = currentDateTime.getFullYear();
+    var month = (currentDateTime.getMonth() + 1);
+    var date = (currentDateTime.getDate() + 1);
+    
+    if(date < 10) {
+      date = '0' + date;
+    }
+    if(month < 10) {
+      month = '0' + month;
+    }
+    
+    var dateTomorrow = year + "-" + month + "-" + date;
+    var checkinElem = document.querySelector("#checkin-date");
+    var checkoutElem = document.querySelector("#checkout-date");
+    
+    checkinElem.setAttribute("min", dateTomorrow);
+    
+    checkinElem.onchange = function () {
+        checkoutElem.setAttribute("min", this.value);
+    }
+    </script> -->
+
+    

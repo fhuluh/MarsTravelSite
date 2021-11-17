@@ -1,0 +1,233 @@
+<div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+                
+                
+                <!-- <nav class="navbar navbar-expand-lg narbar-light">
+                    <a class="navbar-brand mr-auto" href="#">
+                        <img src="assets/img/mars-logo-sml.png" style="width:180px" alt="Site logo">
+
+                    </a>
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse"
+                        data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link " href="/home">Home </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/destination">Our Destinations <span
+                                        class="sr-only">(current)</span></a>
+                               
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/specials">Our Specials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav> -->
+                <app-header></app-header>
+
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- .tm-top-bar -->
+    <router-outlet></router-outlet>
+
+    <div class="tm-page-wrap mx-auto">
+        <section class="tm-banner">
+            <div class="tm-container-outer tm-banner-bgs">
+                <div class="container">
+
+                    <div class="row tm-banner-row tm-banner-row-header">
+                        <div class="col-xs-12">
+                            <div class="tm-banner-header">
+                                <h1 class="text-uppercase tm-banner-title">Our <strong>Specials</strong>. </h1>
+                                <img src="assets/img/dots-3.png" alt="Dots">
+                                <p class="tm-banner-subtitle">See Our Running Specials</p>
+                                <a href="javascript:void(0)" class="tm-down-arrow-link"><i
+                                        class="fa fa-2x fa-angle-down tm-down-arrow"></i></a>
+                            </div>
+                        </div> <!-- col-xs-12 -->
+                    </div> <!-- row -->
+
+                    <div class="row tm-banner-row" id="tm-section-search">
+                        <form class="tm-search-form tm-section-pad-2"
+                            style="background-color: rgba(255, 255, 255, 0.8)">                        
+
+                            <table border="1" style="width: 100%; border-color: #adb9d1;">
+                               <tr>
+                               <th colspan="2" style="font-size: 23px; background-color:#adb9d1; color:white;">
+                                        &nbsp;Special Details</th>
+                                </tr>
+
+                                <tr *ngFor="let item of PriceList; ">
+                                    <td style="width: 75%;">
+                                        <br>
+                                        <p style="font-weight: bolder; font-size: 16px; text-transform: uppercase;"><b>
+                                                &nbsp;&nbsp;<a routerLink="/ospecial">{{item.SpecialDepName}}</a> </b>
+                                        </p>
+                                        &nbsp;&nbsp;Valid Between: <b>{{item.fromD }} to {{item.toD }}</b> <br>
+                                        <i>&nbsp;&nbsp;6 Running Specials</i>
+
+                                    </td>
+                                    <td align="center"> 
+                                        <a  [routerLink]="['/ospecial']" [queryParams]="{SpecialId:20}" class="text-uppercase btn-primary tm-btn">Views Specials</a>
+                                    
+                                        <a [routerLink]="['/ospecial']" [queryParams]="{id: 1}">ss </a>
+                                        
+                                        <a mat-raised-button color="azure" href="/ospecial/{{item.SpecialId}}"   class="btn btn-outline-error m-2 " href="#">View Specials</a>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </form>
+                    </div> <!-- row -->
+                    <br><br>
+                    <div class="tm-banner-overlay"></div>
+                </div> <!-- .container -->
+            </div> <!-- .tm-container-outer -->
+        </section>
+
+
+        <section class="p-5 tm-container-outer tm-bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">
+                        <h2 class="text-uppercase mb-4">our <strong>specials</strong> designed for you</h2>
+                        <p class="mb-4">Marie Lou Simaan the director of the company has been in the travel business for
+                            37 years and has gained sustainable knowledge of the industry. All the staff presently
+                            employed are of an immediate and senior status and well travelled.
+
+                            We felt it was necessary to establish ourselves as a professional, valued and competitive
+                            agency in the world of travel which we felt was lacking.
+                        </p>
+                        <!-- <a routerLink="/ospecial/{{item.id}}}"  class="text-uppercase btn-primary tm-btn">explore All Specials</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--   
+    <app-destinations></app-destinations>
+    <app-places></app-places>
+    <app-contact></app-contact>
+    <app-footer></app-footer> -->
+        <!-- Destination -->
+
+
+        <!-- Recomme -->
+
+
+        <app-footer></app-footer>
+
+    </div>
+</div>
+
+
+
+<script>
+    /* Google Maps
+    ------------------------------------------------*/
+    var map = '';
+    var center;
+
+    function initialize() {
+        var mapOptions = {
+            zoom: 16,
+            center: new google.maps.LatLng(37.769725, -122.462154),
+            scrollwheel: false
+        };
+
+        map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+
+        google.maps.event.addDomListener(map, 'idle', function () {
+            calculateCenter();
+        });
+
+        google.maps.event.addDomListener(window, 'resize', function () {
+            map.setCenter(center);
+        });
+    }
+
+    function calculateCenter() {
+        center = map.getCenter();
+    }
+
+    function loadGoogleMap() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
+        document.body.appendChild(script);
+    }
+
+
+
+    /* DOM is ready
+    ------------------------------------------------*/
+    $(function () {
+
+        // Change top navbar on scroll
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop() > 100) {
+                $(".tm-top-bar").addClass("active");
+            } else {
+                $(".tm-top-bar").removeClass("active");
+            }
+        });
+
+        // Smooth scroll to search form
+        $('.tm-down-arrow-link').click(function () {
+            $.scrollTo('#tm-section-search', 300, { easing: 'linear' });
+        });
+
+        // // // Date Picker in Search form
+        var pickerCheckIn = datepicker('#inputCheckIn');
+        var pickerCheckOut = datepicker('#inputCheckOut');
+
+        // Update nav links on scroll
+        $('#tm-top-bar').singlePageNav({
+            currentClass: 'active',
+            offset: 60
+        });
+
+        // Close navbar after clicked
+        $('.nav-link').click(function () {
+            $('#mainNav').removeClass('show');
+        });
+
+        // Slick Carousel
+        $('.tm-slideshow').slick({
+            infinite: true,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        loadGoogleMap();                                       // Google Map                
+        $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
+    });
+
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://unpkg.com/three@0.129.0/build/three.min.js"></script>
+
+<script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImgs");
+        var imgText = document.getElementById("imgtexts");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>

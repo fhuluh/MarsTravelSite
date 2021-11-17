@@ -1,0 +1,36 @@
+
+<!--Fhulu don't use this header. -->
+
+<div class="tm-top-bar" id="tm-top-bar">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg narbar-light">
+                <a class="navbar-brand mr-auto" href="#" *ngFor="let item of companydList;">
+                    <img src="data:image/jpeg;base64,{{item.ImageDatalogo}}" style="width:180px" alt="Mars Travel Logo">   
+               
+                </a>
+                <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                        <a class="nav-link " href="/home">Home </a><!-- edit this here routerLink="/"  active-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/destination">Our Destinations</a><!-- edit this here routerLink="/destination"-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/specials">Our Specials</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>                            
+        </nav>
+    </div> <!-- row -->
+</div> <!-- container -->
+</div> <!-- .tm-top-bar -->
+
+<router-outlet></router-outlet>
